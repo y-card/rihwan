@@ -191,7 +191,7 @@ img[lazy="loading"] {
   border-bottom: 1px dotted #ddd;
 }
 
-.tab_buttons::v-deep button {
+.tab_buttons:deep button {
   padding-bottom: 2px;
 }
 

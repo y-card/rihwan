@@ -41,7 +41,7 @@ const showLayer = (index: number, prefix: string) => {
 const closeLayer = () => (showLayerImage.value = false);
 const pictureOf = (index: number, prefix: string) => {
   return new URL(
-    `/src/assets/image/albums/${prefix}_${index}.jpeg`,
+    `/src/assets/image/albums/${prefix}_${index}.png`,
     import.meta.url
   ).href;
 };
@@ -49,8 +49,8 @@ const isFullImage = (index: number) => {
   return index === 1 || index === 6;
 };
 
-const albumCountsTop = Array.from({ length: 8 }, (v, k) => k + 1);
-const albumCountsBottom = Array.from({ length: 8 }, (v, k) => k + 8);
+const albumCountsTop = Array.from({ length: 9 }, (v, k) => k + 1);
+const albumCountsBottom = Array.from({ length: 9 }, (v, k) => k + 7);
 
 function loadMore(tab: string) {
   switch (tab) {
@@ -78,7 +78,7 @@ function isLoaded(tab: string) {
 </script>
 
 <template>
-   <div class="albums">
+   <div class="albums first">
     <div
       :class="['picture', { full: isFullImage(index) }]"
       v-for="index in albumCountsTop"
@@ -92,6 +92,26 @@ function isLoaded(tab: string) {
       />
     </div>
   </div>
+  <img
+    v-if="!isLoaded('a')"
+    :src="btn_more"
+    class="btn_more"
+    @click="loadMore('a')"
+  />
+  <!-- <div class="albums" v-if="isLoaded('a')">
+    <div
+      :class="['picture', { full: isFullImage(index) }]"
+      v-for="index in albumCountsBottom"
+      :key="`pic_${index}`"
+    >
+      <img
+        v-lazy="{
+          src: pictureOf(index, 'a'),
+        }"
+        @click="showLayer(index, 'a')"
+      />
+    </div>
+  </div> -->
 
   <LayerImage
     v-if="showLayerImage"
@@ -111,6 +131,8 @@ function isLoaded(tab: string) {
   grid-template-columns: 1fr 1fr;
   row-gap: 4px;
   column-gap: 4px;
+}
+.albums.first {
   margin-top: 20px;
 }
 .albums .picture {
@@ -146,7 +168,7 @@ img[lazy="loading"] {
   border-bottom: 1px dotted #ddd;
 }
 
-.tab_buttons::v-deep button {
+.tab_buttons:deep button {
   padding-bottom: 2px;
 }
 
