@@ -4,18 +4,10 @@ import CardTitle from "./atom/CardTitle.vue";
 import Information from "./Informations.vue";
 import MainVisual from "./MainVisual.vue";
 import MainComment from "./MainComment.vue";
-import Location from "./Location.vue";
-import Footer from "./Footer.vue";
-import ForYourHeart from "./ForYourHeart.vue";
+import Location from "./Location.vue";import ForYourHeart from "./ForYourHeart.vue";
 import { onMounted, onUnmounted } from "vue";
 import { isElemVisible } from "../utils/common";
 import { defineAsyncComponent } from "vue";
-import main_comment from "../assets/image/main_comment.png";
-import calendar from "../assets/image/calendar.png";
-import title_album from "../assets/image/title_album.png";
-import title_information from "../assets/image/title_information.png";
-import title_heart from "../assets/image/title_heart.png";
-import title_location from "../assets/image/title_location.png";
 
 const Albums = defineAsyncComponent(() => import("./Albums.vue"));
 
@@ -50,8 +42,6 @@ function handleScroll() {
 
 <template>
   <MainVisual :type="props.type" />
-
-  <CardItem> <MainComment class="main_comment" :src="main_comment" /> </CardItem>
 
   <!-- <CardItem class="calendar" style="max-width: 1200px">
     <img class="img_calendar" :src="calendar" />
