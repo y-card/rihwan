@@ -49,8 +49,8 @@ const isFullImage = (index: number) => {
   return index === 1 || index === 6;
 };
 
-const albumCountsTop = Array.from({ length: 9 }, (v, k) => k + 1);
-const albumCountsBottom = Array.from({ length: 9 }, (v, k) => k + 7);
+const albumCountsTop = Array.from({ length: 12 }, (v, k) => k + 1);
+const albumCountsBottom = Array.from({ length: 12 }, (v, k) => k + 7);
 
 function loadMore(tab: string) {
   switch (tab) {
@@ -92,12 +92,12 @@ function isLoaded(tab: string) {
       />
     </div>
   </div>
-  <img
+  <!-- <img
     v-if="!isLoaded('a')"
     :src="btn_more"
     class="btn_more"
     @click="loadMore('a')"
-  />
+  /> -->
   <!-- <div class="albums" v-if="isLoaded('a')">
     <div
       :class="['picture', { full: isFullImage(index) }]"

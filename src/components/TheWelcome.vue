@@ -43,12 +43,14 @@ function handleScroll() {
 <template>
   <MainVisual :type="props.type" />
 
+  <CardItem> <MainComment class="main_comment"  /> </CardItem>
+
   <!-- <CardItem class="calendar" style="max-width: 1200px">
     <img class="img_calendar" :src="calendar" />
   </CardItem> -->
 
   <CardItem v-if="type === 'default'" element-ref="card0" :wide="true">
-    <CardTitle :title="'gallery'" :subtitle="'Lee Hwan\'s photos'"/>
+    <CardTitle :title="'gallery'" :subtitle="'Ri Hwan\'s photos'"/>
     <Albums :type="props.type" />
   </CardItem>
 
