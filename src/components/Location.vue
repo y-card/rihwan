@@ -30,25 +30,15 @@ const props = defineProps({
       ><span class="loc_text">네이버지도</span></LocationButton
     >
   </div>
-  <!-- <div :class="['text_locations', type]">
-    <LocationText title="자가용 이용시">
+  <div :class="['text_locations', type]">
+    <LocationText title="주차안내">
       <p class="text">
-        서대전IC, 유성IC에서 10분거리로 1300대 동시주차 가능합니다. 주차시간의
-        제한이 없습니다.
+        - 아바니 센트럴 호텔 주차장은 주차장 회전교차로 기준 왼쪽편 입니다(판매시설 주차장과 동일)        
       </p>
+      <br/>
+      <p class="text">★ 오른쪽 오피스텔 주차장은 별개의 시설이며, 주차 등록이 불가하오니 유의하시어 입차 바랍니다.</p>
     </LocationText>
-    <LocationText title="KTX 기차 이용시">
-      <p class="text">
-        대전역 1호선(반석행) > 유성온천 6번 출구 > 706버스 > 아이파크시티 하차 >
-        도보 5분 소요
-      </p>
-    </LocationText>
-    <LocationText title="시외 고속버스 이용시">
-      <p class="text">
-        유성 시외 버스터미널 > 312버스 > 홍도 초등학교 하차 > 도보 10분 소요
-      </p>
-    </LocationText> -->
-  <!-- </div> -->
+  </div>
 </template>
 
 <style>
@@ -83,6 +73,12 @@ const props = defineProps({
   font-size: 12px;
   color: #000;
   font-weight: 400;
+}
+
+.text_locations.default .text {
+  font-size: 16px;
+  font-weight: 400;
+
 }
 
 .loc_text {

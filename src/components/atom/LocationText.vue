@@ -31,7 +31,7 @@ const props = defineProps({
 }
 .title {
   font-family: "Nanum Myeongjo", serif;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: bold;
   margin-bottom: 5px;
   color: #000;
