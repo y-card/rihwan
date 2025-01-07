@@ -49,8 +49,8 @@ const isFullImage = (index: number) => {
   return index === 1 || index === 6;
 };
 
-const albumCountsTop = Array.from({ length: 12 }, (v, k) => k + 1);
-const albumCountsBottom = Array.from({ length: 12 }, (v, k) => k + 7);
+const albumCountsTop = Array.from({ length: 14 }, (v, k) => k + 1);
+const albumCountsBottom = Array.from({ length: 14 }, (v, k) => k + 7);
 
 function loadMore(tab: string) {
   switch (tab) {

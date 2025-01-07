@@ -12,6 +12,7 @@ const props = defineProps({
     <p class="main_title">1st birthday</p>
     <p class="main_name">김리환</p>
     <p class="description">첫 생일파티에 초대합니다</p>
+    <p class="footer">2025년 1월 18일 오후 6시<br/>아바니 센트럴 호텔 4층 더큐브</p>
   </div>
 </template>
 
@@ -33,22 +34,23 @@ const props = defineProps({
 
 .main_visual .main_title,
 .main_visual .main_name,
-.main_visual .description {
+.main_visual .description,
+.main_visual .footer {
   position: absolute;
   left: 0;
   right: 0;
-  top: 30px;
+  top: 20px;
   margin: 0 auto;
   color: #beb9a1;
   text-align: center;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: bolder;
   line-height: 50px;
 }
 .main_visual .main_name {
   position: absolute;
-  top: 100px;
-  font-size: 52px;
+  top: 78px;
+  font-size: 50px;
   letter-spacing: 1px;
   color: #333;
   opacity: 0.9;
@@ -56,10 +58,19 @@ const props = defineProps({
 }
 
 .main_visual .description {
-  top: 159px;
+  top: 133px;
   color: #333;
-  opacity: 0.8;
-  font-size: 23px;
+  opacity: 0.7;
+  font-size: 22px;
+}
+
+.main_visual .footer {
+  bottom: 50px;
+  top: unset;
+  line-height: normal;
+  font-size: 13px;
+  color: #333;
+  opacity: 0.7;
 }
 
 .subtitle {
